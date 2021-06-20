@@ -1,0 +1,49 @@
+.login-main .face-login{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.login-main .face-login:after{
+    content: "";
+    display: block;
+    width: 200px;
+    height: 200px;
+    clear: both;
+}
+
+.login-main .video{
+    visibility: hidden;
+}
+
+.login-main .canvas-screen-short{
+    border-radius: 50%;
+}
+
+.login-main .canvas-mask{
+    z-index: 999999;
+}
+
+.login-main .video, .login-main .canvas-mask, .login-main .canvas-screen-short{
+    width: 200px;
+    height: 200px;
+    margin-top: 35px;
+    margin-left: -100px;
+    position: absolute;
+}
+
+.login-button .capture{float:right}
+.login-button .capture input{background:url(../images/login_button.gif) no-repeat; border:0; color:#FFF; width:111px; height:29px; text-align:center; cursor:pointer; _cursor:hand}
+
+.noclick{
+	pointer-events: none;
+}
+
+.clearFix:after,
+.clearFix:before{
+    /* 在box1前后添加内容"" */
+    content: "";
+    /* 使内连元素转换为块元素 */
+    display: block;
+    /* 清除两侧的浮动 */
+    clear: both;
+}

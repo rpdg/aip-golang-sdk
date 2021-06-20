@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+{{/*https://www.cnblogs.com/davygeek/p/6387385.html*/}}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../static/css/index.css?v=1.0.0.32" type="text/css">
+    <script src="../static/js/clipboard.min.js"></script>
+    <script src="../static/js/jquery-2.1.3.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div id="m_header">
+        <div class="m_left">
+            <a href="/"><h2>人脸检测登录测试</h2></a> -
+            <span>欢迎，{{if .Username }}{{.Username}}{{else}}游客{{end}}</span>
+        </div>
+        <div class="m_right">
+            {{if .Username}}
+                <input type="button" id="modalBtn" value="上传"/>&nbsp;|&nbsp;<a href="/admin">管理员</a>
+                <a class="margin_left_5" href="/logout">注销</a>
+            {{else}}
+                <a href="/login">登录</a>
+            {{end}}
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/css-login.css" type="text/css">
+    <link rel="stylesheet" href="../static/css/css-face-login.css" type="text/css">
+    <script src="../static/js/jquery-2.1.3.min.js"></script>
+    <script src="../static/js/tracking/tracking-min.js"></script>
+    <script src="../static/js/tracking/data/face-min.js"></script>
+    <title>登录</title>
+</head>
+<body>
+<div class="login-main">
+    <div class="face-login">
+        <video class="video"></video>
+        <canvas class="canvas-mask" width="200px" height="200px"></canvas>
+        <canvas class="canvas-screen-short" width="200px" height="200px"></canvas>
+        <div class="result"></div>
+    </div>
+    <div class="login-button">
+        <div class="checkbox" style=""> <input type="checkbox" name="ispersis" id="ispersis" value="1" /><span><label for="ispersis">记住我</label></span></div>
+        <div class="capture"><input type="button" value=" 登 录" class="submit"></div>
+    </div>
+    <div style=" clear:both;"></div>
+    <div class="login-bottom"></div>
+    <div class="back"><a href="/">&laquo;返回首页</a></div>
+</div>
+{{/*<?php if ($error_msg): ?>*/}}
+{{/*<div class="login-error"><?php echo $error_msg; ?></div>*/}}
+{{/*<?php endif;?>*/}}
+
+{{if .Error}}
+    <div class="login-error">{{.Error}}</div>
+{{end}}
+<script type="text/javascript" src="../static/js/aipface.js"></script>
+</body>
+</html>
